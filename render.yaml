@@ -11,6 +11,18 @@ services:
         value: 18.0.0
       - key: PORT
         value: 5000
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: CLIENT_URL
+        sync: false
 
   # FRONTEND (React App)
   - type: web
@@ -19,6 +31,11 @@ services:
     rootDir: client
     buildCommand: npm install && npm run build
     publishDir: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+      - key: VITE_SOCKET_URL
+        sync: false
     routes:
       - type: rewrite
         source: /*
