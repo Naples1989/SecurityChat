@@ -24,7 +24,7 @@ services:
       - key: CLIENT_URL
         sync: false
 
-staticSites:
+static_sites:
   # FRONTEND (React App)
   - name: securitychat-frontend
     rootDir: client
