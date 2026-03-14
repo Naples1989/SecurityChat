@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+dist/
+client/dist/
+server/dist/
+server/node_modules/
+client/node_modules/
+
+# Environment
+.env
+*.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Mobile
+client/android/app/build/
+client/ios/App/App/public/
+client/ios/App/build/

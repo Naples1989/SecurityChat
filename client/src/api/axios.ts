@@ -1,0 +1,19 @@
+import axios from 'axios';
+
+// IMPORTANTE: Su mobile (Android/iOS) 'localhost' non funziona.
+// Devi usare l'indirizzo IP locale del tuo computer (es: 'http://192.168.1.10:5000/api')
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+const api = axios.create({
+  baseURL: BASE_URL,
+});
+
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export default api;

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SecurityChat</string>
+    <string name="title_activity_main">SecurityChat</string>
+    <string name="package_name">com.securitychat.app</string>
+    <string name="custom_url_scheme">com.securitychat.app</string>
+</resources>
